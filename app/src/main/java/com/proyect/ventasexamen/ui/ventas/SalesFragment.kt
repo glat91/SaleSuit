@@ -43,7 +43,7 @@ class SalesFragment : Fragment() {
             adapter.update(it)
             Log.i("Check___", it.toString())
         }
-        rv_inventory.adapter = adapter
+        rv_salesSales.adapter = adapter
     }
 
 }
