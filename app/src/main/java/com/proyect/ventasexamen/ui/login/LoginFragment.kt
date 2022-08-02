@@ -32,7 +32,7 @@ class LoginFragment : Fragment() {
         btn_enterLogin.setOnClickListener {
             val usuario = inp_userLogin.text.toString()
             val contrasenia = inp_passwordLogin.text.toString()
-            loginViewModel.checkLogin(usuario, contrasenia)
+            loginViewModel.checkLogin(usuario, contrasenia, requireContext())
         }
         loginViewModel.loginResponse.observe(viewLifecycleOwner){
             if (it == true){
