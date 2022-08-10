@@ -1,4 +1,4 @@
-package com.proyect.ventasexamen.ui.ventas.recicler
+package com.proyect.ventasexamen.ui.ventas.SalesReport.recicler
 
 import android.annotation.SuppressLint
 import android.view.LayoutInflater

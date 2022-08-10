@@ -1,6 +1,6 @@
 package com.proyect.ventasexamen.models.inventoryResponse
 
-data class Products(
+data class Product(
     val id: Int,
     val name: String,
     val brand: String,

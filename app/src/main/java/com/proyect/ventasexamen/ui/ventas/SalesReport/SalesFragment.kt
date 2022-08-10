@@ -1,4 +1,4 @@
-package com.proyect.ventasexamen.ui.ventas
+package com.proyect.ventasexamen.ui.ventas.SalesReport
 
 import android.os.Bundle
 import android.util.Log
@@ -9,11 +9,8 @@ import android.view.ViewGroup
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.proyect.ventasexamen.R
-import com.proyect.ventasexamen.ui.inventario.reciclers.InventaryAdapter
-import com.proyect.ventasexamen.ui.ventas.recicler.SalesAdapter
-import com.proyect.ventasexamen.ui.viewModels.InventaryViewModel
+import com.proyect.ventasexamen.ui.ventas.SalesReport.recicler.SalesAdapter
 import com.proyect.ventasexamen.ui.viewModels.SalesViewModel
-import kotlinx.android.synthetic.main.fragment_inventory.*
 import kotlinx.android.synthetic.main.fragment_sales.*
 
 class SalesFragment : Fragment() {

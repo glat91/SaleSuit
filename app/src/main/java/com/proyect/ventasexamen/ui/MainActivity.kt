@@ -7,7 +7,7 @@ import com.proyect.ventasexamen.R
 import com.proyect.ventasexamen.ui.configuracion.SettingsFragment
 import com.proyect.ventasexamen.ui.estadisticas.GraphFragment
 import com.proyect.ventasexamen.ui.inventario.InventoryFragment
-import com.proyect.ventasexamen.ui.ventas.SalesFragment
+import com.proyect.ventasexamen.ui.ventas.SalesReport.SalesFragment
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -28,10 +28,10 @@ class MainActivity : AppCompatActivity() {
     }
 
 
-    /** Metodo para cambiar de fragment */
+    /** Metodo para cambiar de Activity */
     private fun replaceFragment(fragment: Fragment, addBack: Boolean = false, levelName: String? = null){
         val trans = supportFragmentManager.beginTransaction()
-        trans.replace(R.id.frg_mainActivity, fragment)
+        trans.replace(R.id.frg_mainLogin, fragment)
         if(addBack){ trans.addToBackStack(levelName) }
         trans.commit()
     }

@@ -6,14 +6,13 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.proyect.ventasexamen.R
-import com.proyect.ventasexamen.models.ApiResponse
-import com.proyect.ventasexamen.models.inventoryResponse.Products
+import com.proyect.ventasexamen.models.inventoryResponse.Product
 
 class InventaryAdapter(private val cnx: Context): RecyclerView.Adapter<InventaryViewHolder>() {
-    var inventory: MutableList<Products> = ArrayList()
+    var inventory: MutableList<Product> = ArrayList()
 
     @SuppressLint("NotifyDataSetChanged")
-    fun updateList(data: List<Products>){
+    fun updateList(data: List<Product>){
         inventory.clear()
         inventory.addAll(data)
         this.notifyDataSetChanged()

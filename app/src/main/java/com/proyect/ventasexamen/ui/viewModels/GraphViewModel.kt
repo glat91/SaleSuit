@@ -1,9 +1,19 @@
 package com.proyect.ventasexamen.ui.viewModels
 
+import android.content.Context
+import android.widget.Toast
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
+import com.proyect.ventasexamen.apiCall.Engine
+import com.proyect.ventasexamen.apiCall.Services
 import com.proyect.ventasexamen.models.graphRv.GraphRv
 import com.proyect.ventasexamen.models.salesRv.SalesRv
+import kotlinx.coroutines.launch
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
+import retrofit2.create
 
 class GraphViewModel: ViewModel() {
     private val _graph = MutableLiveData<ArrayList<GraphRv>>()
@@ -19,5 +29,28 @@ class GraphViewModel: ViewModel() {
         array.add(GraphRv("06", "Julio", "50000.00"))
         array.add(GraphRv("06", "Julio", "50000.00"))
         _graph.value = array
+    }
+
+    fun getSalesApi(cnx: Context){
+        viewModelScope.launch{
+            val engine = Engine.getEngine().create<Services>()
+            engine.getGrap().enqueue(object: Callback<ArrayList<GraphRv>>{
+                override fun onResponse(call: Call<ArrayList<GraphRv>>, response: Response<ArrayList<GraphRv>>) {
+                    if(response.isSuccessful){
+                        when(response.code()){
+                            200-> _graph.value = response.body()
+                            else->{
+                                Toast.makeText(cnx, "Error en el servidor", Toast.LENGTH_SHORT).show()
+                            }
+                        }
+                    }
+                }
+
+                override fun onFailure(call: Call<ArrayList<GraphRv>>, t: Throwable) {
+                    Toast.makeText(cnx, "Error en el servidor", Toast.LENGTH_SHORT).show()
+                }
+
+            })
+        }
     }
 }
