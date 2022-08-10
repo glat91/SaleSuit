@@ -10,11 +10,8 @@ import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.proyect.ventasexamen.R
 import com.proyect.ventasexamen.ui.estadisticas.recicler.GraphAdapter
-import com.proyect.ventasexamen.ui.ventas.recicler.SalesAdapter
 import com.proyect.ventasexamen.ui.viewModels.GraphViewModel
 import kotlinx.android.synthetic.main.fragment_graph.*
-import kotlinx.android.synthetic.main.fragment_inventory.*
-import kotlinx.android.synthetic.main.fragment_sales.*
 
 class GraphFragment : Fragment() {
     val graphViewModel: GraphViewModel by viewModels()
