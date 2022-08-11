@@ -10,25 +10,26 @@
 
     <TextView
         android:id="@+id/txt_titleSales"
-        android:textSize="25sp"
-        android:textColor="@color/gray_high"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Reporte de Ventas"
+        android:textColor="@color/gray_high"
+        android:textSize="25sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.058" />
+        app:layout_constraintVertical_bias="0.043" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_salesSales"
         android:layout_width="382dp"
-        android:layout_height="641dp"
+        android:layout_height="597dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.551"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_titleSales" />
+        app:layout_constraintTop_toBottomOf="@+id/txt_titleSales"
+        app:layout_constraintVertical_bias="0.428" />
 </androidx.constraintlayout.widget.ConstraintLayout>

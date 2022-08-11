@@ -36,8 +36,8 @@
 
     <ImageView
         android:id="@+id/iv_producto"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.102"
@@ -92,11 +92,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="3dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="4dp"
         android:text="20"
         android:textColor="@color/gray_high"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.024"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/txt_pedidosItemSales"
         app:layout_constraintTop_toTopOf="@+id/view" />
 
