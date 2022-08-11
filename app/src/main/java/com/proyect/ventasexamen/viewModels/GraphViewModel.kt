@@ -31,7 +31,7 @@ class GraphViewModel: ViewModel() {
         _graph.value = array
     }
 
-    fun getSalesApi(cnx: Context){
+    fun getGraph(cnx: Context){
         viewModelScope.launch{
             val engine = Engine.getEngine().create<Services>()
             engine.getGrap().enqueue(object: Callback<ArrayList<GraphRv>>{

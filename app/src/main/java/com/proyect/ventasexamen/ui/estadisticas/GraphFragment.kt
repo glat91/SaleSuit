@@ -30,7 +30,7 @@ class GraphFragment : Fragment() {
     }
 
     private fun initData(){
-        graphViewModel.getSalesApi(requireContext())
+        graphViewModel.getGraph(requireContext())
         createRecicler()
     }
     private fun createRecicler(){

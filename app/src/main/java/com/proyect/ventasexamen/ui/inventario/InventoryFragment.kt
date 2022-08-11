@@ -30,7 +30,7 @@ class InventoryFragment : Fragment() {
         initData()
     }
     private fun initData(){
-        inventaryViewModel.getSalesApi(requireContext())
+        inventaryViewModel.getInventary()
         createRecicler()
     }
     private fun createRecicler(){
