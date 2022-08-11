@@ -15,12 +15,14 @@ import kotlinx.android.synthetic.main.fragment_graph.*
 
 class GraphFragment : Fragment() {
     val graphViewModel: GraphViewModel by viewModels()
+    var total = 0.00
     companion object{
         val graphInstance = GraphFragment()
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        total = 0.00
         initData()
     }
 
@@ -31,6 +33,7 @@ class GraphFragment : Fragment() {
 
     private fun initData(){
         graphViewModel.getGraph(requireContext())
+        inp_totalGraph.text = "$ $total"
         createRecicler()
     }
     private fun createRecicler(){
@@ -38,6 +41,9 @@ class GraphFragment : Fragment() {
         val adapter = GraphAdapter()
         graphViewModel.graph.observe(viewLifecycleOwner){
             adapter.update(it)
+            for(c in it){
+                total += c.total.toInt()
+            }
             Log.i("Check___", it.toString())
         }
         rv_salesGraph.adapter = adapter
