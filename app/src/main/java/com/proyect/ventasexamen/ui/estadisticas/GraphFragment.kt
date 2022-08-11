@@ -33,7 +33,7 @@ class GraphFragment : Fragment() {
 
     private fun initData(){
         graphViewModel.getGraph(requireContext())
-        inp_totalGraph.text = "$ $total"
+
         createRecicler()
     }
     private fun createRecicler(){
@@ -42,8 +42,9 @@ class GraphFragment : Fragment() {
         graphViewModel.graph.observe(viewLifecycleOwner){
             adapter.update(it)
             for(c in it){
-                total += c.total.toInt()
+                total += c.total.toDouble()
             }
+            inp_totalGraph.text = "$ $total"
             Log.i("Check___", it.toString())
         }
         rv_salesGraph.adapter = adapter
