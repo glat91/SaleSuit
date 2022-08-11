@@ -26,7 +26,7 @@ class LoginActivity : AppCompatActivity() {
     /** Metodo para cambiar de fragment */
     private fun replaceFragment(fragment: Fragment, addBack: Boolean = false, levelName: String? = null){
         val trans = supportFragmentManager.beginTransaction()
-        trans.replace(R.id.frg_mainLogin, fragment)
+        trans.replace(R.id.frg_loginActivity, fragment)
         if(addBack){ trans.addToBackStack(levelName) }
         trans.commit()
     }

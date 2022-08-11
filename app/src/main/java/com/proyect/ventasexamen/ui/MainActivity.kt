@@ -38,7 +38,7 @@ class MainActivity : AppCompatActivity() {
     /** Metodo para cambiar de Activity */
     private fun replaceFragment(fragment: Fragment, addBack: Boolean = false, levelName: String? = null){
         val trans = supportFragmentManager.beginTransaction()
-        trans.replace(R.id.frg_mainLogin, fragment)
+        trans.replace(R.id.frg_mainActivity, fragment)
         if(addBack){ trans.addToBackStack(levelName) }
         trans.commit()
     }
