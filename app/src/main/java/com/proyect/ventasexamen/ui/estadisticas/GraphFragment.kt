@@ -43,6 +43,7 @@ class GraphFragment : Fragment() {
             adapter.update(it)
             for(c in it){
                 total += c.total.toDouble()
+                Log.d("Total___", total.toString())
             }
             inp_totalGraph.text = "$ $total"
             Log.i("Check___", it.toString())
