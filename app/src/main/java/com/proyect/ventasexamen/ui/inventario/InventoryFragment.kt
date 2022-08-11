@@ -10,7 +10,7 @@ import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.proyect.ventasexamen.R
 import com.proyect.ventasexamen.ui.inventario.reciclers.InventaryAdapter
-import com.proyect.ventasexamen.ui.viewModels.InventaryViewModel
+import com.proyect.ventasexamen.viewModels.InventaryViewModel
 import kotlinx.android.synthetic.main.fragment_inventory.*
 
 
@@ -30,7 +30,7 @@ class InventoryFragment : Fragment() {
         initData()
     }
     private fun initData(){
-        inventaryViewModel.getInventary()
+        inventaryViewModel.getSalesApi(requireContext())
         createRecicler()
     }
     private fun createRecicler(){

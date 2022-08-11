@@ -1,8 +1,11 @@
 package com.proyect.ventasexamen.ui
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
+import com.microsoft.appcenter.AppCenter
+import com.microsoft.appcenter.analytics.Analytics
+import com.microsoft.appcenter.crashes.Crashes
 import com.proyect.ventasexamen.R
 import com.proyect.ventasexamen.ui.configuracion.SettingsFragment
 import com.proyect.ventasexamen.ui.estadisticas.GraphFragment
@@ -24,6 +27,10 @@ class MainActivity : AppCompatActivity() {
             }
             true
         }
+        AppCenter.start(
+            application, "109aef59-79ee-4fa3-a251-5aa2da8e967b",
+            Analytics::class.java, Crashes::class.java
+        )
 
     }
 

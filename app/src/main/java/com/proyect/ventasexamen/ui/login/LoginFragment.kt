@@ -9,7 +9,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.viewModels
 import com.proyect.ventasexamen.R
 import com.proyect.ventasexamen.ui.MainActivity
-import com.proyect.ventasexamen.ui.viewModels.LoginViewModel
+import com.proyect.ventasexamen.viewModels.LoginViewModel
 import kotlinx.android.synthetic.main.fragment_login.*
 
 class LoginFragment : Fragment() {

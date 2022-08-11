@@ -1,4 +1,4 @@
-package com.proyect.ventasexamen.ui.viewModels
+package com.proyect.ventasexamen.viewModels
 
 import android.content.Context
 import android.widget.Toast
@@ -7,7 +7,6 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.proyect.ventasexamen.apiCall.Engine
 import com.proyect.ventasexamen.apiCall.Services
-import com.proyect.ventasexamen.models.graphRv.GraphRv
 import com.proyect.ventasexamen.models.inventoryResponse.Product
 import kotlinx.coroutines.launch
 import retrofit2.Call
@@ -43,7 +42,6 @@ class InventaryViewModel: ViewModel() {
                         }
                     }
                 }
-
                 override fun onFailure(call: Call<ArrayList<Product>>, t: Throwable) {
                     Toast.makeText(cnx, "Error en el servidor", Toast.LENGTH_SHORT).show()
                 }

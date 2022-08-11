@@ -1,4 +1,4 @@
-package com.proyect.ventasexamen.ui.viewModels
+package com.proyect.ventasexamen.viewModels
 
 import android.content.Context
 import android.widget.Toast
@@ -8,7 +8,6 @@ import androidx.lifecycle.viewModelScope
 import com.proyect.ventasexamen.apiCall.Engine
 import com.proyect.ventasexamen.apiCall.Services
 import com.proyect.ventasexamen.models.graphRv.GraphRv
-import com.proyect.ventasexamen.models.salesRv.SalesRv
 import kotlinx.coroutines.launch
 import retrofit2.Call
 import retrofit2.Callback

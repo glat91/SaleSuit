@@ -40,7 +40,7 @@ class PerssistData() {
             val s = AuthSharedPreference.getSecuredPreferences(cntx).edit()
             s.putString(SHARED_TOKEN, perssistDataModel.toString())
             s.apply()
-            getPerssistDate(cntx)
+            //getPerssistDate(cntx)
         }
         fun getPerssistDate(cntx: Context): String?{
             val shared2 = getSecuredPreferences(cntx)

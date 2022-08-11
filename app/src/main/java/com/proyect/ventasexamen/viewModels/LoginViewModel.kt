@@ -1,4 +1,4 @@
-package com.proyect.ventasexamen.ui.viewModels
+package com.proyect.ventasexamen.viewModels
 
 import android.content.Context
 import android.util.Log

@@ -10,7 +10,7 @@ import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.proyect.ventasexamen.R
 import com.proyect.ventasexamen.ui.estadisticas.recicler.GraphAdapter
-import com.proyect.ventasexamen.ui.viewModels.GraphViewModel
+import com.proyect.ventasexamen.viewModels.GraphViewModel
 import kotlinx.android.synthetic.main.fragment_graph.*
 
 class GraphFragment : Fragment() {
@@ -30,7 +30,7 @@ class GraphFragment : Fragment() {
     }
 
     private fun initData(){
-        graphViewModel.getSales()
+        graphViewModel.getSalesApi(requireContext())
         createRecicler()
     }
     private fun createRecicler(){
