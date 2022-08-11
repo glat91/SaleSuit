@@ -1,6 +1,7 @@
 package com.proyect.ventasexamen.viewModels
 
 import android.content.Context
+import android.util.Log
 import android.widget.Toast
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -35,7 +36,10 @@ class InventaryViewModel: ViewModel() {
                 override fun onResponse(call: Call<ArrayList<Product>>, response: Response<ArrayList<Product>>) {
                     if(response.isSuccessful){
                         when(response.code()){
-                            200-> _inventoryResponse.value = response.body()
+                            200-> {
+                                _inventoryResponse.value = response.body()
+                                Log.d("Inventary____", response.body().toString())
+                            }
                             else->{
                                 Toast.makeText(cnx, "Error en el servidor", Toast.LENGTH_SHORT).show()
                             }

@@ -1,6 +1,7 @@
 package com.proyect.ventasexamen.viewModels
 
 import android.content.Context
+import android.util.Log
 import android.widget.Toast
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -37,7 +38,10 @@ class GraphViewModel: ViewModel() {
                 override fun onResponse(call: Call<ArrayList<GraphRv>>, response: Response<ArrayList<GraphRv>>) {
                     if(response.isSuccessful){
                         when(response.code()){
-                            200-> _graph.value = response.body()
+                            200-> {
+                                _graph.value = response.body()
+                                Log.d("Graph____", response.body().toString())
+                            }
                             else->{
                                 Toast.makeText(cnx, "Error en el servidor", Toast.LENGTH_SHORT).show()
                             }
