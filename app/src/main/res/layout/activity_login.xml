@@ -8,7 +8,7 @@
     tools:context=".ui.LoginActivity">
 
     <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/frg_mainLogin"
+        android:id="@+id/frg_mainActivity"
         android:layout_width="400dp"
         android:layout_height="500dp"
         app:layout_constraintBottom_toBottomOf="parent"
