@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="350dp"
-    android:layout_height="150dp">
+    android:layout_height="150dp"
+    android:background="@color/blue01">
 
 
     <ImageView
@@ -24,6 +25,7 @@
         android:layout_marginStart="28dp"
         android:layout_marginTop="16dp"
         android:text="Samsung TV 53"
+        android:textColor="@color/gray_high"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/img_photoInventory"
@@ -36,6 +38,7 @@
         android:layout_marginStart="20dp"
         android:layout_marginTop="28dp"
         android:text="Samsung"
+        android:textColor="@color/gray_high"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.062"
         app:layout_constraintStart_toEndOf="@+id/img_photoInventory"
@@ -47,7 +50,8 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="28dp"
         android:layout_marginTop="32dp"
-        android:text="AC45-45664lp"
+        android:text="AC45-45664lp"        android:textColor="@color/gray_high"
+
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/img_photoInventory"
@@ -59,7 +63,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="48dp"
         android:text="10"
-        android:textColor="@color/black"
+        android:textColor="@color/gray_ligth"
         android:textSize="40sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"

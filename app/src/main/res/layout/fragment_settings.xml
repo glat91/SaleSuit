@@ -4,46 +4,61 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/blue_background"
     tools:context=".ui.configuracion.SettingsFragment">
+
+    <ImageView
+        android:id="@+id/iv_logo"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/logo"
+        app:layout_constraintBottom_toTopOf="@+id/txt_titleSettings"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.416" />
 
     <TextView
         android:id="@+id/txt_titleSettings"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Cuenta"
-        android:textColor="@color/black"
+        android:textColor="@color/gray_ligth"
         android:textSize="40sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.058" />
+        app:layout_constraintVertical_bias="0.33" />
 
     <TextView
         android:id="@+id/txt_nameSettings"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Nombre: "
+        android:textColor="@color/gray_ligth"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.169"
+        app:layout_constraintHorizontal_bias="0.182"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txt_titleSettings"
-        app:layout_constraintVertical_bias="0.051" />
+        app:layout_constraintVertical_bias="0.11" />
 
     <TextView
         android:id="@+id/inp_nameSettings"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="44dp"
         android:text="Max Steel"
-        android:textColor="@color/black"
+        android:textColor="@color/gray_high"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.124"
+        app:layout_constraintHorizontal_bias="0.128"
         app:layout_constraintStart_toEndOf="@+id/txt_nameSettings"
         app:layout_constraintTop_toBottomOf="@+id/txt_titleSettings" />
 
@@ -53,6 +68,7 @@
         android:layout_height="wrap_content"
         android:text="E-mail: "
         android:textSize="20sp"
+        android:textColor="@color/gray_ligth"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.162"
@@ -64,9 +80,9 @@
         android:id="@+id/inp_emailSettings"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="24dp"
         android:text="max@mailinator.com"
-        android:textColor="@color/black"
+        android:textColor="@color/gray_high"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -80,6 +96,7 @@
         android:layout_height="wrap_content"
         android:text="Password: "
         android:textSize="20sp"
+        android:textColor="@color/gray_ligth"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.179"
@@ -91,13 +108,13 @@
         android:id="@+id/inp_passwordSettings"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="44dp"
+        android:layout_marginTop="24dp"
         android:text="****************"
-        android:textColor="@color/black"
+        android:textColor="@color/gray_high"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.145"
+        app:layout_constraintHorizontal_bias="0.172"
         app:layout_constraintStart_toEndOf="@+id/txt_passwordSettings"
         app:layout_constraintTop_toBottomOf="@+id/inp_emailSettings" />
 
@@ -107,6 +124,7 @@
         android:layout_height="wrap_content"
         android:text="Fecha de registro: "
         android:textSize="20sp"
+        android:textColor="@color/gray_ligth"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.227"
@@ -118,13 +136,13 @@
         android:id="@+id/inp_datedSettings"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="44dp"
+        android:layout_marginTop="28dp"
         android:text="27/02/2022"
-        android:textColor="@color/black"
+        android:textColor="@color/gray_high"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.06"
+        app:layout_constraintHorizontal_bias="0.072"
         app:layout_constraintStart_toEndOf="@+id/txt_datedSettings"
         app:layout_constraintTop_toBottomOf="@+id/inp_passwordSettings" />
 
@@ -132,10 +150,11 @@
         android:id="@+id/btn_closeSessionSettings"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="300dp"
+        android:layout_marginTop="88dp"
+        android:backgroundTint="#680000"
         android:text="Cerrar Sesion"
-        android:backgroundTint="#FA0000"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txt_datedSettings" />
 
