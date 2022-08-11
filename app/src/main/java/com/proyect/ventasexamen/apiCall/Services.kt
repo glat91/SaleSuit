@@ -26,16 +26,16 @@ interface Services {
     @GET(SALES)
     fun getSales(): Call<ArrayList<SalesRv>>
 
-    @GET
+    @GET(GRAPH)
     fun getGrap(): Call<ArrayList<GraphRv>>
-
-    @PUT
+    /*
+    @PUT(INVENTORY)
     fun putSale(@Field("img") img: String,
                 @Field("pedidos") pedidos: Int,
                 @Field("precio") precio: Double,
                 @Field("title") title: String,
                 @Field("vendidos") vendidos: Int): Call<SaleResponse>
-
+    */
     /** Products */
     @POST(INVENTORY)
     fun getInventory(): Call<ArrayList<Product>>
